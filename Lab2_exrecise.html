@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Personal Profile</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Profile</h1>
+        <p>Welcome to my profile page</p>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a> |
+        <a href="#about">About Me</a> |
+        <a href="#form">Form</a>
+    </nav>
+
+    <main>
+
+        <!-- TASK 1: TABLE -->
+        <section id="profile">
+            <h2>Personal Information</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Information</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Nur Shafiy Eriesya Binti Saharuddin</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td>Student</td>
+                </tr>
+                <tr>
+                    <td>Programme</td>
+                    <td>Mobile Computing</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- TASK 2: FORM -->
+        <section id="form">
+            <h2>Personal Information Form</h2>
+
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+
+                <p>Gender:</p>
+
+                <input type="radio" id="male"
+                       name="gender" value="Male" required>
+                <label for="male">Male</label>
+
+                <input type="radio" id="female"
+                       name="gender" value="Female">
+                <label for="female">Female</label>
+                <br><br>
+
+                <p>Favorite Hobbies:</p>
+
+                <input type="checkbox" id="dressing"
+                       name="hobbies" value="Dressing">
+                <label for="dressing">dressing</label>
+                <br>
+
+                <input type="checkbox" id="drawing"
+                       name="hobbies" value="Drawing">
+                <label for="drawing">Drawing</label>
+                <br>
+
+                <input type="checkbox" id="music"
+                       name="hobbies" value="Music">
+                <label for="music">Listening to Music</label>
+                <br><br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+
+        <!-- TASK 3: SEMANTIC HTML -->
+        <section id="about">
+            <article>
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is Nur Shafiy Eriesya Binti Saharuddin.
+                    I am a Year 2 Mobile Computing student.
+                    I enjoy learning about technology.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Personal Profile</p>
+    </footer>
+
+</body>
+</html>
