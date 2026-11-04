@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Interactive Contact Form & Calculator</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div>
+        <h1>Interactive Web Portal <span>- Customer Contact & Calculator</span></h1>
+    </div>
+
+    <!-- Content Section -->
+    <div>
+        <!-- Contact Form -->
+        <form>
+            <h2>Contact Us</h2>
+            
+            <label for="user-email">Email Address:</label><br>
+            <input type="email" id="user-email" name="user-email" required><br><br>
+
+            <label for="contact-date">Preferred Contact Date:</label><br>
+            <input type="date" id="contact-date" name="contact-date"><br><br>
+
+            <label for="satisfaction">Satisfaction Level:</label><br>
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <!-- Inline Calculator -->
+        <div>
+            <h2>Inline Calculator</h2>
+            <form oninput="z.value = parseInt(x.value || 0) + parseInt(y.value || 0)">
+                <label for="x">First Number:</label><br>
+                <input type="number" id="x" name="x" value="0"><br><br>
+
+                <label for="y">Second Number:</label><br>
+                <input type="number" id="y" name="y" value="0"><br><br>
+
+                <label for="z">Sum:</label>
+                <output id="z" name="z" for="x y">0</output>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div>
+        <p>&copy; 2026 Web-Based Interface Design. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
