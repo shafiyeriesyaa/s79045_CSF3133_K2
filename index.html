@@ -1,19 +1,996 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>list of lab</title>
-  </head>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff8f5">
+<meta name="description" content="Pink Bloom Café — kopi, minuman istimewa, dessert dan pastri yang dibuat dengan penuh kasih sayang.">
+<title>Pink Bloom Café | A Little Bloom of Happiness</title>
 
-  <body>
-    <h1>List of Lab</h1>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <h2> Lab 1</h2>
-    <ol>
-        <li> <a href ="lab1.html">Lab1</a>
-        <li> <a href ="lab1_ExerA.html">Lab1_ExerciseA</a>
-        <li> <a href ="lab1_ExerciseB.zip">Lab1_ExerciseB</a>
+<style>
+:root {
+  --pink: #c8758d;
+  --deep: #754456;
+  --rose: #f5dce3;
+  --cream: #fff8f4;
+  --ink: #49383b;
+  --muted: #89777a;
+  --white: #fff;
+  --shadow: 0 14px 38px rgba(100,54,69,.09);
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
-    </ol>
-  </body>
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVIGATION */
+nav {
+  min-height: 78px;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,248,244,.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 3px 18px rgba(80,40,50,.05);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--deep);
+}
+
+.logo span {
+  color: var(--pink);
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+.nav-cta, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pink);
+  color: white;
+  padding: 12px 23px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.nav-cta:hover, .btn:hover {
+  background: var(--deep);
+  transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+  padding: 74px 7% 82px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+  background: linear-gradient(115deg,#f9e6e9 0%,#fff5ed 68%,#f7e8df 100%);
+  min-height: 570px;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font: 600 clamp(42px,5vw,68px)/1.08 'Playfair Display',serif;
+  color: var(--deep);
+  margin: 18px 0;
+}
+
+.hero p {
+  max-width: 490px;
+  color: #79666b;
+  margin-bottom: 27px;
+}
+
+.hero-note {
+  display: block;
+  font-size: 12px;
+  color: #9b7d84;
+  margin-top: 17px;
+}
+
+.hero-pic {
+  height: 440px;
+  position: relative;
+}
+
+.hero-pic img {
+  height: 100%;
+  border-radius: 48% 48% 18px 18px;
+  box-shadow: 18px 18px 0 #e9bdc9;
+}
+
+.floating {
+  position: absolute;
+  bottom: 22px;
+  left: -28px;
+  background: white;
+  padding: 14px 19px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  color: var(--deep);
+}
+
+.floating strong {
+  display: block;
+  font: 600 18px 'Playfair Display',serif;
+}
+
+/* GENERAL SECTIONS */
+section {
+  padding: 82px 7%;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 38px;
+}
+
+.section-head h2 {
+  font: 600 clamp(30px,4vw,43px) 'Playfair Display',serif;
+  color: var(--deep);
+  margin: 8px 0;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-img {
+  height: 330px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.about-img img {
+  height: 100%;
+}
+
+.about-copy h2 {
+  font: 600 38px/1.15 'Playfair Display',serif;
+  color: var(--deep);
+  margin: 12px 0 18px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin-bottom: 13px;
+}
+
+/* MENU */
+.menu-section {
+  background: #fff0f3;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: -12px 0 36px;
+}
+
+.menu-tabs a {
+  border: 1px solid #e9c6d0;
+  padding: 8px 17px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--deep);
+  background: #fff;
+}
+
+.menu-tabs a:hover {
+  background: var(--deep);
+  color: #fff;
+}
+
+.menu-group {
+  margin: 38px 0 16px;
+  color: var(--deep);
+  font: 600 25px 'Playfair Display',serif;
+}
+
+.menu-group small {
+  font: 500 11px 'DM Sans',sans-serif;
+  color: var(--muted);
+  margin-left: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 7px 25px rgba(80,40,50,.055);
+  transition: .25s;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.menu-card img {
+  height: 215px;
+  transition: transform .4s;
+}
+
+.menu-card:hover img {
+  transform: scale(1.04);
+}
+
+.menu-info {
+  padding: 18px 19px 20px;
+}
+
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.menu-info h4 {
+  font: 600 19px 'Playfair Display',serif;
+  color: var(--deep);
+  line-height: 1.2;
+}
+
+.price {
+  white-space: nowrap;
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.menu-info p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 9px;
+  min-height: 40px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 12px;
+  background: #fae9ee;
+  color: #a65c73;
+  padding: 4px 9px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* SIGNATURE */
+.signature {
+  padding: 0 7% 82px;
+  background: #fff0f3;
+}
+
+.signature-inner {
+  background: var(--deep);
+  color: white;
+  border-radius: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.signature-copy {
+  padding: 50px;
+}
+
+.signature-copy .eyebrow {
+  color: #f4c4d1;
+}
+
+.signature-copy h2 {
+  font: 600 39px/1.15 'Playfair Display',serif;
+  margin: 12px 0;
+}
+
+.signature-copy p {
+  color: #f1dfe4;
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.signature-inner img {
+  height: 100%;
+  min-height: 330px;
+}
+
+.signature .btn {
+  background: #fff;
+  color: var(--deep);
+}
+
+/* PROMO GIF */
+.video-ad {
+  background: linear-gradient(120deg,#f9e6e9,#fff5ed);
+  padding: 76px 7%;
+}
+
+.video-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.video-wrap .promo-gif {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background: #593847;
+  border-radius: 14px;
+}
+
+.video-caption {
+  text-align: center;
+  padding: 22px 12px 10px;
+}
+
+.video-caption h3 {
+  font: 600 27px 'Playfair Display',serif;
+  color: var(--deep);
+  margin: 6px 0;
+}
+
+.video-caption p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.video-hint {
+  font-size: 11px;
+  color: #9b7d84;
+  margin-top: 10px;
+}
+
+/* CONTACT */
+.contact {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.contact h2 {
+  font: 600 38px 'Playfair Display',serif;
+  color: var(--deep);
+  margin: 10px 0;
+}
+
+.contact p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--deep);
+  margin-bottom: 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #ead8dc;
+  border-radius: 10px;
+  background: #fffdfc;
+  font: 13px 'DM Sans',sans-serif;
+  color: var(--ink);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+}
+
+/* FOOTER */
+footer {
+  background: #593847;
+  color: #f9e9ed;
+  text-align: center;
+  padding: 36px 20px;
+}
+
+footer .logo {
+  color: #fff;
+  font-size: 24px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #e5cbd3;
+  margin-top: 7px;
+}
+
+/* RESPONSIVE */
+@media(max-width:850px) {
+  .hero { gap: 30px; }
+  .menu-grid { grid-template-columns: repeat(2,1fr); }
+  .about { gap: 30px; }
+  .signature-copy { padding: 35px; }
+}
+
+@media(max-width:620px) {
+  nav {
+    height: auto;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo { font-size: 21px; }
+
+  nav ul {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+    font-size: 11px;
+  }
+
+  .nav-cta { padding: 9px 15px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 7%;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-pic {
+    height: 310px;
+    margin: 5px 15px 0;
+  }
+
+  .floating { left: -12px; }
+
+  .about, .contact, .signature-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img { height: 240px; }
+
+  .menu-grid { grid-template-columns: 1fr; }
+
+  .menu-card img { height: 230px; }
+
+  .signature {
+    padding: 0 5% 60px;
+  }
+
+  .signature-inner img {
+    min-height: 230px;
+    max-height: 260px;
+  }
+
+  .signature-copy { padding: 30px; }
+
+  .contact { gap: 25px; }
+
+  section { padding: 62px 6%; }
+
+  .video-ad { padding: 58px 5%; }
+
+  .video-wrap { padding: 9px; }
+
+  .video-caption h3 { font-size: 23px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a class="logo" href="#home">✿ Pink <span>Bloom</span> Café</a>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#promo-video">Promo Video</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a class="nav-cta" href="#menu">Explore Menu ↗</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div>
+    <span class="eyebrow">A little bloom of happiness</span>
+
+    <h1>Good days start with something sweet.</h1>
+
+    <p>
+      Singgah sebentar, nikmati kopi kegemaran dan
+      pencuci mulut yang dibuat dengan penuh kasih sayang.
+      Your cosy little escape awaits.
+    </p>
+
+    <a class="btn" href="#menu">Discover our menu →</a>
+
+    <span class="hero-note">
+      Freshly brewed · Lovingly baked · Made for you
+    </span>
+  </div>
+
+  <div class="hero-pic">
+    <img
+      src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=85"
+      alt="Strawberry layer cake">
+
+    <div class="floating">
+      A sweet little moment
+      <strong>Made with love ♡</strong>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about">
+
+    <div class="about-img">
+      <img
+        src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=85"
+        alt="Coffee being prepared in a cosy cafe">
+    </div>
+
+    <div class="about-copy">
+      <span class="eyebrow">Our little story</span>
+
+      <h2>More than coffee, it's a feeling.</h2>
+
+      <p>
+        Pink Bloom Café ialah ruang santai untuk anda
+        menikmati perkara kecil yang menggembirakan —
+        secawan kopi, kek yang lembut dan masa berkualiti
+        bersama insan tersayang.
+      </p>
+
+      <p>
+        Kami percaya setiap hari boleh jadi lebih indah
+        dengan sedikit kemanisan. Come as you are,
+        stay for the little joys.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+
+  <div class="section-head">
+    <span class="eyebrow">Made fresh, served with love</span>
+    <h2>A menu to make you bloom</h2>
+    <p>From your morning coffee to an afternoon sweet treat.</p>
+  </div>
+
+  <div class="menu-tabs">
+    <a href="#coffee">Coffee & Tea</a>
+    <a href="#signature-drinks">Signature Drinks</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#bakes">Freshly Baked</a>
+  </div>
+
+  <!-- COFFEE -->
+  <h3 class="menu-group" id="coffee">
+    Coffee & Tea <small>your daily comfort</small>
+  </h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Iced caramel latte">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Brown Sugar Latte</h4>
+          <span class="price">RM 14</span>
+        </div>
+        <p>Espresso, chilled milk and our buttery brown sugar syrup.</p>
+        <span class="tag">BEST SELLER</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=85" alt="Iced matcha latte">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Cloud Matcha Latte</h4>
+          <span class="price">RM 15</span>
+        </div>
+        <p>Earthy Japanese matcha with silky milk and a soft creamy finish.</p>
+        <span class="tag">CUSTOMER FAVOURITE</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85" alt="Hot cappuccino">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Bloom Cappuccino</h4>
+          <span class="price">RM 12</span>
+        </div>
+        <p>A classic espresso topped with velvety steamed milk foam.</p>
+        <span class="tag">CLASSIC</span>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- SIGNATURE DRINKS -->
+  <h3 class="menu-group" id="signature-drinks">
+    Signature Drinks <small>a little something special</small>
+  </h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=85" alt="Strawberry iced drink">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Strawberry Velvet</h4>
+          <span class="price">RM 16</span>
+        </div>
+        <p>Sweet strawberry milk with a dreamy, creamy top.</p>
+        <span class="tag">PINK BLOOM SIGNATURE</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="peachy-rose-fizz.jpg" alt="Refreshing citrus iced tea">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Peachy Rose Fizz</h4>
+          <span class="price">RM 13</span>
+        </div>
+        <p>Peach, citrus and sparkling soda for a refreshing sip.</p>
+        <span class="tag">REFRESHING</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85" alt="Iced chocolate drink">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Midnight Chocolate</h4>
+          <span class="price">RM 15</span>
+        </div>
+        <p>Rich chocolate blended with milk and finished with cream.</p>
+        <span class="tag">FOR CHOCO LOVERS</span>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- DESSERTS -->
+  <h3 class="menu-group" id="desserts">
+    Desserts <small>save room for sweetness</small>
+  </h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85" alt="Strawberry shortcake">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Strawberry Cloud Cake</h4>
+          <span class="price">RM 17</span>
+        </div>
+        <p>Fluffy vanilla sponge layered with strawberry cream.</p>
+        <span class="tag">MUST TRY</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=85" alt="Tiramisu dessert">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Classic Tiramisu</h4>
+          <span class="price">RM 16</span>
+        </div>
+        <p>Coffee-soaked layers with a light mascarpone cream.</p>
+        <span class="tag">CAFÉ FAVOURITE</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=85" alt="Chocolate brownies">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Fudgy Brownie</h4>
+          <span class="price">RM 11</span>
+        </div>
+        <p>Deep chocolate flavour with a soft, gooey centre.</p>
+        <span class="tag">CHOCOLATE HEAVEN</span>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- BAKERY -->
+  <h3 class="menu-group" id="bakes">
+    Freshly Baked <small>straight from our oven</small>
+  </h3>
+
+  <div class="menu-grid">
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85" alt="Golden butter croissant">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Butter Croissant</h4>
+          <span class="price">RM 9</span>
+        </div>
+        <p>Golden, flaky pastry with a rich buttery aroma.</p>
+        <span class="tag">BAKED DAILY</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=85" alt="Glazed strawberry donut">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Berry Kiss Donut</h4>
+          <span class="price">RM 8</span>
+        </div>
+        <p>Soft fluffy donut finished with a sweet berry glaze.</p>
+        <span class="tag">A LITTLE TREAT</span>
+      </div>
+    </article>
+
+    <article class="menu-card">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85" alt="Freshly baked bread">
+      <div class="menu-info">
+        <div class="menu-top">
+          <h4>Garlic Cheese Toast</h4>
+          <span class="price">RM 12</span>
+        </div>
+        <p>Toasted bread with savoury garlic butter and melted cheese.</p>
+        <span class="tag">SAVOURY PICK</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROMO VIDEO / GIF -->
+<section class="video-ad" id="promo-video">
+
+  <div class="section-head">
+    <span class="eyebrow">A little moment of sweetness</span>
+    <h2>Meet Pink Bloom Café</h2>
+    <p>Take a little look at the drinks, desserts and lovely moments waiting for you.</p>
+  </div>
+
+  <div class="video-wrap">
+
+    <img
+      class="promo-gif"
+      src="pink_bloom_cafe_ad.gif"
+      alt="Iklan animasi Pink Bloom Café"
+      loading="lazy">
+
+    <div class="video-caption">
+      <span class="eyebrow">Pink Bloom Café</span>
+      <h3>A little happiness in every sip.</h3>
+      <p>Good coffee · Sweet treats · Beautiful moments</p>
+      <p class="video-hint">
+        Iklan animasi 20 saat.
+        Pastikan fail pink_bloom_cafe_ad.gif berada
+        dalam folder yang sama dengan index.html.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SIGNATURE FEATURE -->
+<section class="signature">
+
+  <div class="signature-inner">
+
+    <div class="signature-copy">
+      <span class="eyebrow">Only at Pink Bloom</span>
+
+      <h2>Meet your new favourite: Strawberry Velvet.</h2>
+
+      <p>
+        Strawberry sweetness, creamy goodness and a little
+        pink magic in every sip. The perfect companion for
+        your sweetest café moments.
+      </p>
+
+      <a class="btn" href="#contact">
+        Ask us about today's special
+      </a>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=1000&q=85"
+      alt="Pink strawberry signature drink">
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="contact">
+
+    <div>
+      <span class="eyebrow">Come say hello</span>
+
+      <h2>Let's make your day a little sweeter.</h2>
+
+      <p>
+        Have a question, a suggestion or want to know more
+        about our menu? Send us a message.
+        We'd love to hear from you.
+      </p>
+    </div>
+
+    <form class="contact-card" action="#" method="post">
+
+      <div class="form-row">
+        <label for="name">Your name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="e.g. Aisyah"
+          required>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required>
+      </div>
+
+      <div class="form-row">
+        <label for="interest">What are you interested in?</label>
+        <select id="interest" name="interest">
+          <option>Menu enquiry</option>
+          <option>Event / celebration</option>
+          <option>Feedback</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Your message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Write us a little note..."></textarea>
+      </div>
+
+      <button class="btn" type="submit">
+        Send Message ♡
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">✿ Pink Bloom Café</div>
+  <p>A little happiness in every cup.</p>
+  <p>© 2026 Pink Bloom Café. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
