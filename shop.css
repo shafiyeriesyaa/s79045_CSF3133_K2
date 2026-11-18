@@ -1,0 +1,109 @@
+/* Body setup with font family and background image settings */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin: 0;
+}
+
+/* Header container with background image, cover sizing, and white text */
+header {
+    background-image: url("books.jpeg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+/* Headings styled with Merriweather font */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Navigation bar background and layout */
+nav {
+    background-color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+/* Navigation links */
+li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Hover effect for navigation links */
+li a:hover {
+    background-color: #111;
+}
+
+/* Active class for the Home navigation link */
+li a.active {
+    background-color: #04AA6D;
+}
+
+/* Main content spacing */
+main {
+    padding: 20px;
+}
+
+/* Paragraph line-height styling */
+p {
+    line-height: 1.6;
+}
+
+/* Table styling with single borders */
+#products {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Table header formatting: uppercase, centered, vertical padding */
+#products th {
+    background-color: #04AA6D;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* Right-align the Price (RM) column (3rd column) */
+#products td:nth-child(3),
+#products th:nth-child(3) {
+    text-align: right;
+}
+
+/* Alternating row colors (zebra striping) for even rows */
+#products tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Corrected hover effect for table rows */
+#products tr:hover {
+    background-color: #ddd;
+}
+
+/* Subtle footer styling */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}

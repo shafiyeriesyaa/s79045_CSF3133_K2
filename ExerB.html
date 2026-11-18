@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bookstore</title>
+    <!-- Fix 1: Corrected rel="stylesheet" and added second font (Merriweather) for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<!-- 
+  Error 1 (shop.html, Line 6): Invalid stylesheet link syntax ("stylesheets" instead of "stylesheet").
+  Error 2 (shop.html, Line 13): Missing class or navigation wrapper; list links use "#home", "#books", "#contact" instead of proper layout classes.
+  Error 3 (shop.html, Line 21): Table header cells (th) are missing inside a table row (tr).
+  Error 4 (shop.css, Line 2): Misspelled font name 'Robotto' instead of 'Roboto'.
+  Error 5 (shop.css, Line 3): Missing image file reference or typo ("paper.gif" needs to match lab resources).
+  Error 6 (shop.css, Line 5): Misspelled CSS property "bacground-position" instead of "background-position".
+  Error 7 (shop.css, Line 12): Floating list items without proper container background or overflow handling; background-color: #333 misplaced inside ul block.
+  Error 8 (shop.css, Line 17): "display: inline;" should be "display: block;" for navigation anchor links to allow proper padding and hover states.
+  Error 9 (shop.css, Line 37): Pseudo-class selector typo ":hovered" instead of the correct ":hover".
+  Error 10 (shop.html, Line 10-12): Inline style block used for h1 alignment instead of handling it cleanly via external CSS.
+-->
+<header>
+    <h1>Campus Bookstore</h1>
+</header>
+<nav>
+    <ul>
+        <!-- Fix 2: Added class="active" to the Home link -->
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<main>
+    <p>Textbooks, stationery and more for every student.</p>
+    <table id="products">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price (RM)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Web Design Basics</td>
+                <td>Textbook</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>A4 Notebook</td>
+                <td>Stationery</td>
+                <td>6.50</td>
+            </tr>
+            <tr>
+                <td>USB Drive 32GB</td>
+                <td>Gadget</td>
+                <td>25.00</td>
+            </tr>
+            <tr>
+                <td>Highlighter Set</td>
+                <td>Stationery</td>
+                <td>9.90</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+<footer>
+    &copy; 2026 Campus Bookstore
+</footer>
+</body>
+</html>
